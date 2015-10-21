@@ -1,0 +1,63 @@
+<!doctype HTML>
+<html>
+<head>
+
+</head>
+<body>
+	<div id="left">
+	<div id="middle">
+	<form action="http://martinakraus.net/createPlayer.php" method="get" id="form1">
+		<table>
+			<tr>
+				<td> Name </td>
+				<td><input type ="text" name="Name"></td>
+			</tr>
+			<tr>
+				<td> Vorname </td>
+				<td><input type ="text" name="Vorname"></td>
+			</tr>
+			<tr>
+				<td> Verein </td>
+				<td><input type ="text" name="Verein"></td>
+			</tr>
+			<tr>
+				<td> Headcoach </td>
+				<td><input type ="text" name="Headcoach"></td>
+			</tr>
+			<tr>
+				<td> Assistant Coach </td>
+				<td><input type ="text" name="Assistant Coach"></td>
+			</tr>
+			<tr>
+				<td> Aktiv </td>
+				<td>
+					<input type="radio" name="aktiv" value="ja" />Ja
+					<input type="radio" name="aktiv" value="nein" />Nein
+				</td>
+			</tr>
+			<tr>
+				<td>Position</td>
+				<td>
+					<select>
+						<option value="Center">Center</option>
+						<option value="Guard">Guard</option>
+						<option value="Power Forward">Power Forward</option>
+						<option selected="Wing" value="Wing">Wing</option>
+						<option value="Small Forward">Small Forward</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td> Trikotnummer </td>
+				<td><input type ="text" name="Trikotnummer"></td>
+			</tr>
+			<tr>
+				<td> Jahrgang </td>
+				<td><input type ="text" name="Jahrgang"></td>
+			</tr>
+		</table>
+	</form>
+	<button type="submit" form="form1" value="Submit">Submit</button>
+	</div>
+</body>
+</html>
