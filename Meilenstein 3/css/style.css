@@ -1,0 +1,59 @@
+h1 {
+    font-size: 22px;
+    font-family: verdana;
+    margin: 0%;
+}
+body {
+    background-color: rgb(0, 162, 232);
+    margin-top: 0%;
+    margin-bottom: 0%;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+.homeh1 {
+    color: rgb(136,0,21);
+    font-size: 22px;
+    font-family: verdana;
+}
+#player_entryh1 {
+    font-family: verdana;
+    color: rgb(75, 47, 37);
+    font-size: 24px;
+}
+.middle {
+    background-color: rgb(153, 217, 234);
+    text-align: center;
+    height: 100vh;
+}
+.menu {
+    margin: auto;
+    padding: 1%;
+    width: 30%;
+    background-color: rgb(63, 72, 204);
+}
+.menuelement {
+    color: black;
+    background-color: rgb(0, 162, 232);
+    font-weight: bold;
+    font-size: 18px;
+    font-family: verdana;
+}
+.menuelement:hover {
+    background-color: rgb(63, 72, 204);
+}
+.form_labels{
+	margin-left: 50px;
+	text-align: left;
+	width: 125px;
+    font-size: 16px;
+    color: black;
+    float: left;
+    font-weight: bold;
+}
+.playerInputFields{
+	width: 150px;
+}
+.playerInput{
+	margin-top: 60px;
+	float: left;
+}
