@@ -11,7 +11,12 @@ function formValidation(){
 			errors.push(elements[i]);
 			foundErrors=true;
 		}
+                else
+			elements[i].style.borderColor = "";                    
 	}
+        if (foundErrors)
+            alert("Einige Eingaben sind fehlerhaft. Bitte überprüfen Sie ihre Eingaben");
+        
 	return !foundErrors;
 }
 
@@ -19,27 +24,26 @@ function validate(element){
 	if(element.type=="text"){
 		var currentElementsName = element.name;	
 		if(currentElementsName=="number"){
-			window.alert("number");
-			return validateTrickotNumber(element.value);
+                    return validateTrikotNumber(element.value);
 		}else if(currentElementsName=="jahr"){
-			window.alert("jahr");
-			return validateYear(element.value);
+                    return validateYear(element.value);
 		}else{
-			return validateName(element.value);
+                    return validateText(element.value);
 		}
 	}else if (element.type=="radio"){
-		return;
+            return;
 	}
 }
 
-function validateName(value){
-	return false;	
+function validateText(value){
+    return value.match(/^[a-z öäüß]+$/i) !== null; // Nimmt auch Leerzeichen/deutsche Umlaute an (Verein kann ja auch Leerzeichen enthalten)
 }
 
 function validateYear(value){
-	return false;
+    var d = new Date();
+    return (value >= 0 && value < d.getFullYear()); // value.match(/^\d{1,4}$/) !== null && | Das match kann eigentlich draußen bleiben, wenn sie die will, dann rein damit
 }
 
-function validateTrickotNumber(value){
-	return false;
+function validateTrikotNumber(value){
+    return (value > 3 && value < 16); // value.match(/^\d{1,2}$/) !== null && | Das match kann eigentlich draußen bleiben, wenn sie die will, dann rein damit
 }
