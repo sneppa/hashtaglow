@@ -1,0 +1,38 @@
+<!doctype HTML>
+<html>
+<head>
+    <title>Spieler anlegen</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../css/style.css"/>
+</head>
+<body>
+<div class="middle">
+    <h1 id="player_entryh1">Spieler anlegen</h1>
+    <div class="playerInput">
+	    <form action="http://martinakraus.net/createPlayer.php" id="player_form" method="get">
+	        <label class="form_labels">Name</label>
+			<input class="playerInputFields" type ="text" name="name"><br>
+	        <label class="form_labels">Vorname</label><input class="playerInputFields" type ="text" name="vorname"><br>
+	        <label class="form_labels">Verein</label><input class="playerInputFields" type ="text" name="verein"><br>
+	        <label class="form_labels">Headcoach</label><input class="playerInputFields" type ="text" name="hcoach"><br>
+	        <label class="form_labels">Assistant Coach</label><input class="playerInputFields" type ="text" name="acoach"><br>
+	        <label class="form_labels">Aktiv</label><span class="playerInputFields">
+	        <label for="radioYes">Ja</label><input id="radioYes" type="radio" name="aktiv" value="ja"/>
+	        <label for="radioNo">Nein</label><input id="radioNo" type="radio" name="aktiv" value="nein"/></span><br>
+	        <label class="form_labels">Position</label>
+	        <select class="playerInputFields" name="position">
+	            <option value="Center">Center</option>
+	            <option value="Guard">Guard</option>
+	            <option value="Power Forward">Power Forward</option>
+	            <option value="Wing" selected>Wing</option>
+	            <option value="Small Forward">Small Forward</option>
+	        </select><br>
+	        <label class="form_labels">Trikotnummer</label><input class="playerInputFields" type ="text" name="number"><br>
+	        <label class="form_labels">Jahrgang</label><input class="playerInputFields" type ="text" name="jahr">
+	    </form>
+		<button id="sendButtonPlayerEntry" onclick="return formValidation()" type="submit" form="player_form" value="Senden">Senden</button>
+    </div>
+</div>
+<script language="javascript" type="text/javascript" src="../js/validation.js"></script>
+</body>
+</html>
