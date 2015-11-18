@@ -20,6 +20,9 @@ body {
     color: rgb(75, 47, 37);
     font-size: 24px;
 }
+a{
+	text-decoration: none;
+}
 .middle {
     background-color: rgb(153, 217, 234);
     text-align: center;
