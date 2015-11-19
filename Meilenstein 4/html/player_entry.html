@@ -28,9 +28,13 @@
 	            <option value="Small Forward">Small Forward</option>
 	        </select><br>
 	        <label class="form_labels">Trikotnummer</label><input class="playerInputFields" type ="text" name="number"><br>
-	        <label class="form_labels">Jahrgang</label><input class="playerInputFields" type ="text" name="jahr">
+	        <label class="form_labels">Jahrgang</label><input class="playerInputFields" type ="text" name="jahr"><br>
+			<button id="sendButtonPlayerEntry" onclick="return formValidation()" type="submit" form="player_form" value="Senden">Senden</button>
+		</div>
+		<div class="favoriten">
+		 <label class="form_labels">als Favorit:</label><input class="favcheckbox" type="checkbox" name="favorit">
+		</div>
 	    </form>
-		<button id="sendButtonPlayerEntry" onclick="return formValidation()" type="submit" form="player_form" value="Senden">Senden</button>
     </div>
 </div>
 <script language="javascript" type="text/javascript" src="../js/validation.js"></script>
