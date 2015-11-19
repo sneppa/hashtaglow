@@ -1,3 +1,7 @@
+/* This is a single-line comment */
+a{
+	text-decoration: none;
+}
 h1 {
     font-size: 22px;
     font-family: verdana;
@@ -10,18 +14,22 @@ body {
     margin-left: 20%;
     margin-right: 20%;
 }
-.homeh1 {
-    color: rgb(136,0,21);
-    font-size: 22px;
-    font-family: verdana;
+table , th, td {
+	border: 1px solid black;
 }
+
+/* ID's */
 #player_entryh1 {
     font-family: verdana;
     color: rgb(75, 47, 37);
     font-size: 24px;
 }
-a{
-	text-decoration: none;
+
+/* Classes */
+.homeh1 {
+    color: rgb(136,0,21);
+    font-size: 22px;
+    font-family: verdana;
 }
 .middle {
     background-color: rgb(153, 217, 234);
