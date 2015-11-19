@@ -1,18 +1,20 @@
 <!doctype HTML>
 <html>
 <head>
-    <title>Meine Spieler</title>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="../css/style.css"/>
+	<title>Meine Spieler</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="../css/style.css"/>
+	<script language="javascript" type="text/javascript" src="../js/playerTable.js"></script>
 </head>
 <body>
 <div class="middle">
-    <h1 id="player_entryh1">Meine Spieler</h1>
-	
-	<!--need to create the empty table here with all needed colums and rows to insert Player Data from JSON into it-->
-	<!--call JavaScript here-->
-	
-</div>
-	<script language="javascript" type="text/javascript" src="../js/table.js"></script>
+	<h1 id="player_entryh1">Meine Spieler</h1>
+		<!-- using "playerInput" css class to get content into the right place. Need clean up css -->
+		<div class="playerInput">
+			<!--insert the Table with JS into the static HTML-->
+			<div id="playerTable"></div>
+			<script type="text/javascript">updateMe();</script>
+			</div>
+		</div>
 </body>
 </html>
