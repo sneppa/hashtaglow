@@ -16,14 +16,15 @@ function updateMe(){
 function showPlayerDetails(myResponse) {
 	var arr = JSON.parse(myResponse);
 	var i;
-	var out = "<table>";
+	var out = "<table align='center'>";
 	
 	//add "Alle Spieler" and "Meine Favoriten" as Headlines to the Table
-	// TODO - onClick Event -> onlyFavorites = true/false
 	out += "<tr><th colspan='3' onclick='changeToAll()'>Alle Spieler</th><th colspan='5'onclick='changeToFavorites()'>Meine Favoriten</th>";
 	//add headlines to the table
 	out += "<tr><td>Spieler</td><td>Verein</td><td>Headcoach</td><td>Assistant</td><td>Position</td><td>Aktiv</td><td>Nummer</td><td>Jahr</td></tr>";
-
+	//add div Tag to the inner elements to set the font size
+	out += "<div class='favoritesTableContent'>"
+	
 	//iterate through the data to build it up in a table
 	for(i = 0; i < arr.length; i++) {
 		if (onlyFavorites == true){
@@ -68,6 +69,8 @@ function showPlayerDetails(myResponse) {
     }
 	//end table
 	out += "</table>";
+	//end div
+	out += "</div>"
 	//insert output to document
 	document.getElementById("playerTable").innerHTML = out;
 }
@@ -83,6 +86,7 @@ function wrapActivitytoGerman(array, position){
 function changeToAll(){
 	onlyFavorites = false;
 	updateMe();
+	document.getElementByTag("th").
 }
 
 function changeToFavorites(){

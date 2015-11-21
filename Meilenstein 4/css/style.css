@@ -1,4 +1,3 @@
-/* This is a single-line comment */
 a{
 	text-decoration: none;
 }
@@ -18,15 +17,20 @@ table , th, td {
 	border: 1px solid black;
 }
 
+
+
 /* ID's */
-#player_entryh1 {
+#mainHeadline {
     font-family: verdana;
     color: rgb(75, 47, 37);
     font-size: 24px;
 }
+#favoritesTableHeadline {
+	font-size: 14px;
+}
 
 /* Classes */
-.homeh1 {
+.mainPageHighlight {
     color: rgb(136,0,21);
     font-size: 22px;
     font-family: verdana;
@@ -68,8 +72,6 @@ table , th, td {
 	margin-top: 60px;
 	float: left;
 }
-.favoriten {
-	margin-right: 50px;
-    float: right;
-	margin-top: 10%;
+.favoritesTableContent{
+	font-size: 50px;
 }
