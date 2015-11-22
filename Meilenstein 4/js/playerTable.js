@@ -21,7 +21,8 @@ function showPlayerDetails(myResponse) {
 	//add "Alle Spieler" and "Meine Favoriten" as Headlines to the Table
 	out += "<tr><th colspan='3' onclick='changeToAll()'>Alle Spieler</th><th colspan='5'onclick='changeToFavorites()'>Meine Favoriten</th>";
 	//add headlines to the table
-	out += "<tr><td>Spieler</td><td>Verein</td><td>Headcoach</td><td>Assistant</td><td>Position</td><td>Aktiv</td><td>Nummer</td><td>Jahr</td></tr>";
+	out += "<tr><td>Spieler</td><td>Verein</td><td>Headcoach</td><td>Assistant</td>" +
+			"<td>Position</td><td>Aktiv</td><td>Nummer</td><td>Jahr</td></tr>";
 	//add div Tag to the inner elements to set the font size
 	out += "<div class='favoritesTableContent'>"
 	
@@ -30,6 +31,7 @@ function showPlayerDetails(myResponse) {
 		if (onlyFavorites == true){
 			if (arr[i].isFavorite == true){
 				out += "<tr><td>" +
+				arr[i].firstname +  " " +
 				arr[i].surname + 
 				"</td><td>" +
 				arr[i].team +
@@ -49,6 +51,7 @@ function showPlayerDetails(myResponse) {
 			}
 		} else {
 			out += "<tr><td>" +
+			arr[i].firstname + " " +
 			arr[i].surname + 
 			"</td><td>" +
 			arr[i].team +
