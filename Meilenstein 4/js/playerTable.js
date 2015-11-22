@@ -19,7 +19,14 @@ function showPlayerDetails(myResponse) {
 	var out = "<table align='center'>";
 	
 	//add "Alle Spieler" and "Meine Favoriten" as Headlines to the Table
-	out += "<tr><th colspan='3' onclick='changeToAll()'>Alle Spieler</th><th colspan='5'onclick='changeToFavorites()'>Meine Favoriten</th>";
+	if(onlyFavorites){
+		out += "<tr><th colspan='3' onclick='changeToAll()' id='all'>Alle Spieler</th>" +
+		"<th bgcolor='#4682B4' colspan='5'onclick='changeToFavorites()'>Meine Favoriten</th>";
+	}else{
+		out += "<tr><th colspan='3' onclick='changeToAll()' bgcolor='#4682B4'>Alle Spieler</th>" +
+		"<th colspan='5'onclick='changeToFavorites()'>Meine Favoriten</th>";
+	}
+
 	//add headlines to the table
 	out += "<tr><td>Spieler</td><td>Verein</td><td>Headcoach</td><td>Assistant</td>" +
 			"<td>Position</td><td>Aktiv</td><td>Nummer</td><td>Jahr</td></tr>";
@@ -89,7 +96,6 @@ function wrapActivitytoGerman(array, position){
 function changeToAll(){
 	onlyFavorites = false;
 	updateMe();
-	//document.getElementByTag("th").
 }
 
 function changeToFavorites(){
