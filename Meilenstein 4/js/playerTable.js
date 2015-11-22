@@ -1,5 +1,5 @@
 var xmlhttp = new XMLHttpRequest();
-var url = "../data/data.json";
+var url = "./data.json";
 
 var onlyFavorites = false;
 
@@ -86,7 +86,7 @@ function wrapActivitytoGerman(array, position){
 function changeToAll(){
 	onlyFavorites = false;
 	updateMe();
-	document.getElementByTag("th").
+	//document.getElementByTag("th").
 }
 
 function changeToFavorites(){
