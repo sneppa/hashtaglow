@@ -24,7 +24,7 @@ body {
     font-size: 24px;
 }
 #favoritesTableHeadline {
-	font-size: 14px;
+    font-size: 14px;
 }
 #back
 {
@@ -32,11 +32,6 @@ body {
     margin: 50px;
     right: 0px;
     top: 0px;
-}
-#playerTable
-{
-    border-collapse: collapse;
-    border-spacing: 0px;
 }
 #playerTable td
 {
@@ -89,15 +84,6 @@ body {
 .menu li:hover {
     background-color: rgb(63, 72, 204);
 }
-.form_labels{
-    margin-left: 50px;
-    text-align: left;
-    width: 150px;
-    font-size: 16px;
-    color: black;
-    float: left;
-    font-weight: bold;
-}
 .right
 {
     float: right;
@@ -108,6 +94,15 @@ body {
     float: left;
     width: 50%;
 }
+form .left > label, form .right > label {
+    margin-left: 50px;
+    text-align: left;
+    width: 150px;
+    font-size: 16px;
+    color: black;
+    float: left;
+    font-weight: bold;
+}
 .playerInput button
 {
     width: 150px;
@@ -115,12 +110,17 @@ body {
     margin-top: 40px;
     float: left;
 }
-.playerInputFields{
+form input, form select, form .radio {
     width: 150px;
     margin-bottom: 5px;
     height: 20px;
     display: inline-block;
 }
+form .radio input {
+    width: auto;
+    height: auto;
+    margin-right: 20px;
+}
 .favoritesTableContent{
-	font-size: 50px;
+    font-size: 50px;
 }

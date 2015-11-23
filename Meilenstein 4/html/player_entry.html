@@ -12,29 +12,23 @@
     <div class="playerInput">
 	    <form action="http://martinakraus.net/createPlayer.php" id="player_form" method="get">
                 <div class="left">
-                    <label class="form_labels">Name</label>
-                    <input class="playerInputFields" type="text" name="name"><br>
+                    <label>Name</label>
+                    <input type="text" name="name"><br>
                     
-                    <label class="form_labels">Vorname</label>
-                    <input class="playerInputFields" type="text" name="vorname"><br>
+                    <label>Vorname</label>
+                    <input type="text" name="vorname"><br>
                     
-                    <label class="form_labels">Verein</label>
-                    <input class="playerInputFields" type="text" name="verein"><br>
+                    <label>Verein</label>
+                    <input type="text" name="verein"><br>
                     
-                    <label class="form_labels">Headcoach</label>
-                    <input class="playerInputFields" type="text" name="hcoach"><br>
+                    <label>Headcoach</label>
+                    <input type="text" name="hcoach"><br>
                     
-                    <label class="form_labels">Assistant Coach</label>
-                    <input class="playerInputFields" type="text" name="acoach"><br>
+                    <label>Assistant Coach</label>
+                    <input type="text" name="acoach"><br>
                     
-                    <label class="form_labels">Aktiv</label>
-                    <div class="playerInputFields">
-                        <label for="radioYes">Ja</label><input id="radioYes" type="radio" name="aktiv" value="ja"/>
-                        <label for="radioNo">Nein</label><input id="radioNo" type="radio" name="aktiv" value="nein"/>
-                    </div><br>
-                    
-                    <label class="form_labels">Position</label>
-                    <select class="playerInputFields" name="position">
+                    <label>Position</label>
+                    <select name="position">
                         <option value="Center">Center</option>
                         <option value="Guard">Guard</option>
                         <option value="Power Forward">Power Forward</option>
@@ -42,15 +36,21 @@
                         <option value="Small Forward">Small Forward</option>
                     </select><br>
                     
-                    <label class="form_labels">Trikotnummer</label>
-                    <input class="playerInputFields" type ="text" name="number"><br>
-                    <label class="form_labels">Jahrgang</label>
-                    <input class="playerInputFields" type ="text" name="jahr"><br>
+                    <label>Trikotnummer</label>
+                    <input type ="text" name="number"><br>
+                    <label>Jahrgang</label>
+                    <input type ="text" name="jahr"><br>
+                    
+                    <label>Aktiv</label>
+                    <div class="radio">
+                        <label for="radioYes">Ja</label><input id="radioYes" type="radio" name="aktiv" value="ja"/>
+                        <label for="radioNo">Nein</label><input id="radioNo" type="radio" name="aktiv" value="nein"/>
+                    </div><br>
                     
                     <button id="sendButtonPlayerEntry" onclick="return formValidation()" type="submit" form="player_form" value="Senden">Senden</button>
                 </div>
                 <div class="left">
-                    <label class="form_labels">als Favorit:</label><input class="favcheckbox" type="checkbox" name="favorit">
+                    <label>als Favorit:</label><input class="favcheckbox" type="checkbox" name="favorit">
                 </div>
 	    </form>
     </div>
