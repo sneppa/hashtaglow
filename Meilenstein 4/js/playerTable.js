@@ -19,13 +19,14 @@ function showPlayerDetails(myResponse) {
 	var out = "<table align='center'>";
 	
 	//add "Alle Spieler" and "Meine Favoriten" as Headlines to the Table
+        var allPlayers = ' class="active"';
+        var favPlayers = '';
 	if(onlyFavorites){
-		out += "<tr><th colspan='3' onclick='changeToAll()' id='all'>Alle Spieler</th>" +
-		"<th bgcolor='#4682B4' colspan='5'onclick='changeToFavorites()'>Meine Favoriten</th>";
-	}else{
-		out += "<tr><th colspan='3' onclick='changeToAll()' bgcolor='#4682B4'>Alle Spieler</th>" +
-		"<th colspan='5'onclick='changeToFavorites()'>Meine Favoriten</th>";
+            allPlayers = '';
+            favPlayers = ' class="active"';
 	}
+        out += "<tr><th colspan='3' onclick='changeToAll()' id='allPlayers' "+allPlayers+">Alle Spieler</th>" +
+        "<th colspan='5' onclick='changeToFavorites()' id='favPlayers' "+favPlayers+">Meine Favoriten</th></tr>";
 
 	//add headlines to the table
 	out += "<tr><td>Spieler</td><td>Verein</td><td>Headcoach</td><td>Assistant</td>" +
@@ -35,28 +36,7 @@ function showPlayerDetails(myResponse) {
 	
 	//iterate through the data to build it up in a table
 	for(i = 0; i < arr.length; i++) {
-		if (onlyFavorites == true){
-			if (arr[i].isFavorite == true){
-				out += "<tr><td>" +
-				arr[i].firstname +  " " +
-				arr[i].surname + 
-				"</td><td>" +
-				arr[i].team +
-				"</td><td>" +
-				arr[i].headcoach +
-				"</td><td>" +
-				arr[i].asisstantcoach +
-				"</td><td>" +
-				arr[i].position +
-				"</td><td>" +
-				wrapActivitytoGerman(arr, i) +
-				"</td><td>" +
-				arr[i].number +
-				"</td><td>" +
-				arr[i].year +
-				"</td></tr>";
-			}
-		} else {
+		if ((onlyFavorites == true && arr[i].isFavorite == true) || onlyFavorites == false){
 			out += "<tr><td>" +
 			arr[i].firstname + " " +
 			arr[i].surname + 
