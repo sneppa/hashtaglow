@@ -1,0 +1,60 @@
+<!doctype HTML>
+<html>
+<head>
+    <title>Spieler anlegen</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../css/style.css"/>
+</head>
+<body>
+<div class="middle">
+    <h1 id="mainHeadline">Spieler anlegen</h1>
+    <a href="./home.html" id="back">< zurück</a>
+    <div class="playerInput">
+	    <form action="http://localhost:8000" id="player_form" method="get">
+                <div class="left">
+                    <label>Name</label>
+                    <input type="text" name="name"><br>
+                    
+                    <label>Vorname</label>
+                    <input type="text" name="vorname"><br>
+                    
+                    <label>Verein</label>
+                    <input type="text" name="verein"><br>
+                    
+                    <label>Headcoach</label>
+                    <input type="text" name="hcoach"><br>
+                    
+                    <label>Assistant Coach</label>
+                    <input type="text" name="acoach"><br>
+                    
+                    <label>Position</label>
+                    <select name="position">
+                        <option value="Center">Center</option>
+                        <option value="Guard">Guard</option>
+                        <option value="Power Forward">Power Forward</option>
+                        <option value="Wing" selected>Wing</option>
+                        <option value="Small Forward">Small Forward</option>
+                    </select><br>
+                    
+                    <label>Trikotnummer</label>
+                    <input type ="text" name="number"><br>
+                    <label>Jahrgang</label>
+                    <input type ="text" name="jahr"><br>
+                    
+                    <label>Aktiv</label>
+                    <div class="radio">
+                        <label for="radioYes">Ja</label><input id="radioYes" type="radio" name="aktiv" value="ja"/>
+                        <label for="radioNo">Nein</label><input id="radioNo" type="radio" name="aktiv" value="nein"/>
+                    </div><br>
+                    
+                    <button id="sendButtonPlayerEntry" onclick="return formValidation()" type="submit" form="player_form" value="Senden">Senden</button>
+                </div>
+                <div class="left">
+                    <label>als Favorit:</label><input class="favcheckbox" type="checkbox" name="favorit">
+                </div>
+	    </form>
+    </div>
+</div>
+<script language="javascript" type="text/javascript" src="../js/validation.js"></script>
+</body>
+</html>
