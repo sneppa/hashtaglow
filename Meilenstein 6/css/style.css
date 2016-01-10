@@ -33,10 +33,27 @@ body {
     right: 0px;
     top: 0px;
 }
+#playerTable
+{
+    overflow: hidden;
+    max-width: 100%;
+    position: relative;
+}
+#playerTable table
+{
+    border: 1px solid #000;
+    position: relative;
+    table-layout:fixed;
+    width: 80%;
+}
 #playerTable td
 {
+    max-width: 0;
     text-align: left;
     border: 1px solid black;
+    padding: 3px;
+    text-overflow: ellipsis;
+    overflow: hidden;
 }
 #playerTable th
 {

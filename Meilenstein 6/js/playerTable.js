@@ -16,7 +16,7 @@ function updateMe(){
 function showPlayerDetails(myResponse) {
 	var arr = JSON.parse(myResponse);
 	var i;
-	var out = "<table align='center'>";
+	var out = "<table align='center' cellspacing=0>";
 	
 	//add "Alle Spieler" and "Meine Favoriten" as Headlines to the Table
         var allPlayers = ' class="active"';
