@@ -1,5 +1,5 @@
 var xmlhttp = new XMLHttpRequest();
-var url = "http://localhost:8000/AllPlayers";
+var url = "/AllPlayers";
 
 var onlyFavorites = false;
 
@@ -73,12 +73,12 @@ function wrapActivitytoGerman(array, position){
 
 function changeToAll(){
 	onlyFavorites = false;
-	url = "http://localhost:8000/AllPlayers";
+	url = "/AllPlayers";
 	updateMe();
 }
 
 function changeToFavorites(){
 	onlyFavorites = true;
-	url = "http://localhost:8000/Favorites";
+	url = "/Favorites";
 	updateMe();
 }
