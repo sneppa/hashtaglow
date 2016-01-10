@@ -1,0 +1,126 @@
+a{
+	text-decoration: none;
+}
+h1 {
+    font-size: 22px;
+    font-family: verdana;
+    margin: 0px;
+    padding: 40px 0px;
+}
+body {
+    background-color: rgb(0, 162, 232);
+    margin-top: 0%;
+    margin-bottom: 0%;
+    margin-left: 20%;
+    margin-right: 20%;
+    font-family: Arial, sans-serif;
+}
+
+
+/* ID's */
+#mainHeadline {
+    font-family: verdana;
+    color: rgb(75, 47, 37);
+    font-size: 24px;
+}
+#favoritesTableHeadline {
+    font-size: 14px;
+}
+#back
+{
+    position: absolute;
+    margin: 50px;
+    right: 0px;
+    top: 0px;
+}
+#playerTable td
+{
+    text-align: left;
+    border: 1px solid black;
+}
+#playerTable th
+{
+    border: 1px solid black;
+    cursor: pointer;
+}
+#allPlayers , #favPlayers
+{
+    line-height: 30px;
+}
+#allPlayers.active , #favPlayers.active
+{
+    background: rgb(0,38,255);
+    color: #FFF;
+}
+
+/* Classes */
+.mainPageHighlight {
+    color: rgb(136,0,21);
+    font-size: 22px;
+    font-family: verdana;
+}
+.middle {
+    background-color: rgb(153, 217, 234);
+    text-align: center;
+    height: 100vh;
+    position: relative;
+}
+.menu {
+    margin: auto;
+    padding: 1%;
+    width: 30%;
+    background-color: rgb(63, 72, 204);
+}
+.menu li{
+    color: black;
+    background-color: rgb(0, 162, 232);
+    font-weight: bold;
+    font-size: 18px;
+    font-family: verdana;
+    list-style-type: none;
+    line-height: 40px;
+    
+}
+.menu li:hover {
+    background-color: rgb(63, 72, 204);
+}
+.right
+{
+    float: right;
+    width: 50%;
+}
+.left
+{
+    float: left;
+    width: 50%;
+}
+form .left > label, form .right > label {
+    margin-left: 50px;
+    text-align: left;
+    width: 150px;
+    font-size: 16px;
+    color: black;
+    float: left;
+    font-weight: bold;
+}
+.playerInput button
+{
+    width: 150px;
+    margin-left: 50px;
+    margin-top: 40px;
+    float: left;
+}
+form input, form select, form .radio {
+    width: 150px;
+    margin-bottom: 5px;
+    height: 20px;
+    display: inline-block;
+}
+form .radio input {
+    width: auto;
+    height: auto;
+    margin-right: 20px;
+}
+.favoritesTableContent{
+    font-size: 50px;
+}
