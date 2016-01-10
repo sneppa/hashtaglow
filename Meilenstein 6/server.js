@@ -51,6 +51,11 @@ app.get('/onlyFavorites', function (req, res) {
 });
 
 // addPlayer - TODO need to write PUT
+app.put('/Player', function (req, res) { 
+	console.log(req.body);
+	res.send('PUT inc');
+});
+
 //create server variable
 /*
 var server = http.createServer(function (request, response) {

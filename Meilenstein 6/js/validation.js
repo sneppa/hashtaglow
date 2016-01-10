@@ -16,27 +16,11 @@ function formValidation(){
         if (foundErrors) {
             alert("Einige Eingaben sind fehlerhaft. Bitte überprüfen Sie ihre Eingaben");
         } else {
-	        //TODO CP
-	        var request = new XMLHttpRequest();
-	        
-	        request.open("PUT", "http://127.0.0.1:8000/addPlayer", true);
-	        request.setRequestHeader('Content-Type', 'application/json');
-	        request.onload = function () {
-            	if ((request.readyState == 4) && (request.status == 200) && (request.responseText != null)) {
-                	alert(request.responseText);
-                }
-            };
-            request.send(JSON.stringify({
-            	// adding values to put
-            	vorname: vorname.value,
-            	name: nachname.value,
-            	jahr: jahr.value,
-            	hcoach: headcoach.value,
-            	acoach: assistcoach.value,
-            	position: playerPos[playerPos.selectedIndex].value,
-            	number: nummer.value
-        }));
-        return !foundErrors;
+	        //TODO - create put request with data
+/*
+	        var request = new XMLHttpRequest();	        
+	        request.open("PUT", "http://127.0.0.1:8000/Player", true);
+*/
         }
 }
 
