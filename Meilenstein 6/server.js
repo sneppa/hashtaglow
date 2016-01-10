@@ -6,6 +6,7 @@ var express = require("express");
 var app = express();
 var path = require('path');
 
+
 //Server Config
 const PORT=8000;
 const IP="127.0.0.1";
@@ -15,7 +16,6 @@ app.use('/css',express.static(__dirname + '/css'));
 app.use('/', express.static(__dirname + '/html'));
 app.use('/js', express.static(__dirname + '/js'));
 
-console.log(__dirname + "/data.json");
 // main page
 app.get("/", function(req, res) {
    res.sendFile(path.resolve('html/home.html'));
@@ -29,11 +29,33 @@ app.get('/allPlayers', function (req, res) {
     });
 });
 
-// show Favorites - TODO
-
+// show Favorites
+app.get('/onlyFavorites', function (req, res) {
+    fs.readFile(__dirname + "/html/data.json", 'utf8', function (err, data) {
+        var jSonArray = JSON.parse(data);
+        var resJSON = [];
+        for (var i = 0; i < jSonArray.length; i++) {
+            if (jSonArray[i].isFavorite) {
+                resJSON.push({
+                    "_id"           : jSonArray[i]._id,
+                    "isActive"      : jSonArray[i].isActive,
+                    "isFavorite"    : jSonArray[i].isFavorite,
+                    "year"          : jSonArray[i].year,
+                    "number"        : jSonArray[i].number,
+                    "firstname"     : jSonArray[i].firstname,
+                    "surname"       : jSonArray[i].surname,
+                    "headcoach"     : jSonArray[i].headcoach,
+                    "asisstantcoach": jSonArray[i].asisstantcoach,
+                    "team"          : jSonArray[i].team,
+                    "position"      : jSonArray[i].position
+                });
+            }
+        }
+        res.end(JSON.stringify(resJSON));
+    });
+});
 
 // addPlayer - TODO need to write PUT
-
 //create server variable
 /*
 var server = http.createServer(function (request, response) {
