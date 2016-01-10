@@ -1,7 +1,3 @@
 Mutter A, 1995, D, E, Wing, 12
 Mutter A, 1995, D, E, Wing, 12
-undefined undefined, undefined, undefined, undefined, undefined, undefined
-undefined undefined, undefined, undefined, undefined, undefined, undefined
-undefined undefined, undefined, undefined, undefined, undefined, undefined
-undefined undefined, undefined, undefined, undefined, undefined, undefined
-undefined undefined, undefined, undefined, undefined, undefined, undefined
+Martin Weber, 1991, A, B, Wing, 12

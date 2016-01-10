@@ -1,4 +1,5 @@
 function formValidation(){
+        var data = {};
 	var elements = document.getElementById("player_form").elements;
 	var errors = [""];
 	var foundErrors = false;
@@ -11,17 +12,29 @@ function formValidation(){
 			errors.push(elements[i]);
 			foundErrors=true;
 		} else
-			elements[i].style.borderColor = "";                    
+                {
+			elements[i].style.borderColor = ""; 
+                        data[elements[i].name] = elements[i].value;
+                }
 	}
         if (foundErrors) {
             alert("Einige Eingaben sind fehlerhaft. Bitte überprüfen Sie ihre Eingaben");
         } else {
-	        //TODO - create put request with data
-/*
+
 	        var request = new XMLHttpRequest();	        
 	        request.open("PUT", "http://127.0.0.1:8000/Player", true);
-*/
+                request.setRequestHeader('Content-Type', 'application/json');
+                request.onreadystatechange = function()
+                {
+                  if (request.readyState == 4 && request.status == 200 && request.responseText == "ok")
+                      alert("Player saved");
+//                  else
+//                      alert("Error");
+                };
+                request.send(JSON.stringify(data));
+
         }
+        return false;
 }
 
 function validate(element){

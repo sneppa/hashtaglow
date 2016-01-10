@@ -44,10 +44,10 @@
                     <label>Aktiv</label>
                     <div class="radio">
                         <label for="radioYes">Ja</label><input id="radioYes" type="radio" name="aktiv" value="ja"/>
-                        <label for="radioNo">Nein</label><input id="radioNo" type="radio" name="aktiv" value="nein"/>
+                        <label for="radioNo">Nein</label><input id="radioNo" type="radio" name="aktiv" value="nein" checked="checked"/>
                     </div><br>
                     
-                    <button id="sendButtonPlayerEntry" onclick="return formValidation()" type="submit" form="player_form" value="Senden">Senden</button>
+                    <button id="sendButtonPlayerEntry" onclick="return formValidation()" type="submit" form="player_form" value="Senden" name="submit">Senden</button>
                 </div>
                 <div class="left">
                     <label>als Favorit:</label><input class="favcheckbox" type="checkbox" name="favorit">

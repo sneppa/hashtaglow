@@ -5,7 +5,7 @@ var onlyFavorites = false;
 
 function updateMe(){
 	xmlhttp.onreadystatechange=function() {
-	    if (xmlhttp.readyState == 4) {
+	    if (xmlhttp.readyState == 4 && xmlhttp.status == 200 && xmlhttp.responseText != null) {
 	        showPlayerDetails(xmlhttp.responseText);
 	    }
 	}

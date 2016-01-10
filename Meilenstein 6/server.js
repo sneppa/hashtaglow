@@ -3,6 +3,7 @@ var http = require('http');
 var url = require('url');
 var fs = require("fs");
 var express = require("express");
+var bodyParser = require('body-parser')
 var app = express();
 var path = require('path');
 
@@ -10,6 +11,12 @@ var path = require('path');
 app.use('/css',express.static(__dirname + '/css'));
 app.use('/', express.static(__dirname + '/html'));
 app.use('/js', express.static(__dirname + '/js'));
+
+// Bodyparser Options for PUT Request
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({
+  extended: true
+}));
 
 // main page
 app.get("/", function(req, res) {
@@ -50,10 +57,23 @@ app.get('/Favorites', function (req, res) {
     });
 });
 
-// addPlayer - TODO need to write PUT
+
 app.put('/Player', function (req, res) { 
-	console.log(req.body);
-	res.send('PUT inc');
+
+    var queryData = req.body;
+    
+    console.log(queryData);
+
+    if (typeof queryData.submit != "undefined")
+    {
+        console.log('Data send');
+        res.end("ok");
+        var myString = queryData.vorname + ' ' + queryData.name + ', ' + queryData.jahr + ', ' + queryData.hcoach + ', ' + queryData.acoach + ', ' + queryData.position + ', ' + queryData.number + '\n';
+        console.log(myString);
+        appendToFile('./db/form.txt', myString);
+    }
+    else
+        res.end("error");
 });
 
 //create server variable
