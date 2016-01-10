@@ -28,8 +28,8 @@ function formValidation(){
                 {
                   if (request.readyState == 4 && request.status == 200 && request.responseText == "ok")
                       alert("Player saved");
-//                  else
-//                      alert("Error");
+                  else
+                      alert("Error");
                 };
                 request.send(JSON.stringify(data));
 
