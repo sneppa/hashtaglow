@@ -6,11 +6,6 @@ var express = require("express");
 var app = express();
 var path = require('path');
 
-
-//Server Config
-const PORT=8000;
-const IP="127.0.0.1";
-
 // include static content (CSS,HTML,JS)
 app.use('/css',express.static(__dirname + '/css'));
 app.use('/', express.static(__dirname + '/html'));
