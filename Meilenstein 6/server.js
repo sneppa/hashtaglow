@@ -25,7 +25,7 @@ app.get('/allPlayers', function (req, res) {
 });
 
 // show Favorites
-app.get('/onlyFavorites', function (req, res) {
+app.get('/Favorites', function (req, res) {
     fs.readFile(__dirname + "/html/data.json", 'utf8', function (err, data) {
         var jSonArray = JSON.parse(data);
         var resJSON = [];

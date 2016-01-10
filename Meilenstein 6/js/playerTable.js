@@ -1,5 +1,5 @@
 var xmlhttp = new XMLHttpRequest();
-var url = "./data.json";
+var url = "http://localhost:8000/AllPlayers";
 
 var onlyFavorites = false;
 
@@ -36,7 +36,6 @@ function showPlayerDetails(myResponse) {
 	
 	//iterate through the data to build it up in a table
 	for(i = 0; i < arr.length; i++) {
-		if ((onlyFavorites == true && arr[i].isFavorite == true) || onlyFavorites == false){
 			out += "<tr><td>" +
 			arr[i].firstname + " " +
 			arr[i].surname + 
@@ -55,7 +54,6 @@ function showPlayerDetails(myResponse) {
 			"</td><td>" +
 			arr[i].year +
 			"</td></tr>";
-		}
     }
 	//end table
 	out += "</table>";
@@ -75,10 +73,12 @@ function wrapActivitytoGerman(array, position){
 
 function changeToAll(){
 	onlyFavorites = false;
+	url = "http://localhost:8000/AllPlayers";
 	updateMe();
 }
 
 function changeToFavorites(){
 	onlyFavorites = true;
+	url = "http://localhost:8000/Favorites";
 	updateMe();
 }
