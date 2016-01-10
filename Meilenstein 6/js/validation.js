@@ -22,7 +22,7 @@ function formValidation(){
         } else {
 
 	        var request = new XMLHttpRequest();	        
-	        request.open("PUT", "http://127.0.0.1:8000/Player", true);
+	        request.open("PUT", "/Player", true);
                 request.setRequestHeader('Content-Type', 'application/json');
                 request.onreadystatechange = function()
                 {
