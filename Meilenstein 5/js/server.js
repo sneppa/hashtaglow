@@ -15,11 +15,16 @@ var server = http.createServer(function (request, response) {
 		console.log('requested ico')
 		return;	
 	}
-	console.log('called')
+	console.log('User connected to Server')
 	var queryData = url.parse(request.url, true).query;
-	var myString = queryData.vorname + ' ' + queryData.name + ', ' + queryData.jahr + ', ' + queryData.hcoach + ', ' + queryData.acoach + ', ' + queryData.position + ', ' + queryData.number + '\n';
-
-	appendToFile('../db/form.txt', myString);
+        
+        if (typeof queryData.name != "undefined")
+        {
+            console.log('Data send');
+            var myString = queryData.vorname + ' ' + queryData.name + ', ' + queryData.jahr + ', ' + queryData.hcoach + ', ' + queryData.acoach + ', ' + queryData.position + ', ' + queryData.number + '\n';
+            appendToFile('../db/form.txt', myString);
+        }
+        
 	response.end('Sie haben sich erfolgreich auf den WebServer mit der Url ' + IP + ':' + PORT + ' verbunden');
 	
 });
@@ -33,7 +38,7 @@ function appendToFile(path, appendingString){
 	fs.open(path, 'a', function( err, fd ) {
 		fs.write( fd, appendingString, null, 'utf8', function(){
 			fs.close(fd, function(){
-				console.log('file closed')
+//				console.log('file closed')
 			});
 		});
 	});
